@@ -18,6 +18,6 @@ pub fn build(b: *std.Build) !void {
         },
     );
 
-    const lsp_codegen = b.dependency("lsp_codegen", .{});
+    const lsp_codegen = b.dependency("lsp_kit", .{});
     module.addImport("lsp", lsp_codegen.module("lsp"));
 }
